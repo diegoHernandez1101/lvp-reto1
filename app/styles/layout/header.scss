@@ -1,0 +1,51 @@
+.navbar-default {
+  //background-color: #FFFFFF;
+  background-color: #e4348c; //Propuesta 1
+}
+.navbar-fixed-top {
+  background: #fff;
+  transition-duration: 0.5s;
+  border-bottom: 1px solid #e7eaec !important;
+  z-index: 2030;
+}
+.headLine{
+  border-bottom: 1px solid #e7eaec !important;
+
+}
+.navbar-default .nav > li > a {
+  color: #fff;
+}
+.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
+  background-color: #e4348c;
+  color: #ffffff;
+}
+.navbar-toggle {
+  background-color: #3bb0c9; //Propuesta 1
+  color: #fff;
+  padding: 5px 5px;
+  font-size: 1px;
+  margin-top: 12px;
+
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #a4dee7; //Propuesta 1
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+  color: #ffffff;
+}
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 8px;
+  margin-left: -2px;
+  margin-right: inherit;
+  border: 0px solid transparent;
+}
+.navbar-default .nav > li.prueba {
+  padding-top: 15px;
+  padding-bottom: 32px;
+  background-color: #ffffff;
+  color: #FFFFFF;
+}

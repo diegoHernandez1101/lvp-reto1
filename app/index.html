@@ -1,0 +1,201 @@
+<!doctype html>
+<html ng-app="lvpBusquedaProductosApp">
+
+  <head>
+    <meta http-equiv="Content-Type"    content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=10;"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title page-title></title>
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/material-scrolltop/material-scrolltop.css -->
+    <link rel="stylesheet" href="bower_components/material-scrolltop/src/material-scrolltop.css" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/jasny-bootstrap/jasny-bootstrap.css -->
+    <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/summernote/summernote.css -->
+    <link rel="stylesheet" href="bower_components/summernote/dist/summernote.css" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/block-ui/block-ui.css -->
+    <link rel="stylesheet" href="bower_components/angular-block-ui/dist/angular-block-ui.css" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/sweetalert/sweetalert.css -->
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/smoke/smoke.css -->
+    <link rel="stylesheet" href="bower_components/smoke/dist/css/smoke.css" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/footable/footable.css -->
+    <link rel="stylesheet" href="bower_components/footable/css/footable.core.css" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css -->
+    <link rel="stylesheet" href="bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" />
+    <!-- endbuild -->
+
+    <!-- build:css(.) plugins/font-awesome/font-awesome.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/external/animate.css">
+  </head>
+  <body>
+
+      <!--<button class="material-scrolltop" type="button"><i class="fa fa-arrow-up"></i></button>-->
+      <button class="material-scrolltop" type="button" style="background-color: #3bb0c9; border-color: #3bb0c9; "><i class="fa fa-arrow-up"></i></button>
+
+  <div>
+      <div ng-show="!isSpecificPage() && !showSpinner" ng-cloak>
+          <section ng-include=" 'views/commons/header.html' " id="headerbar" class="top-header"></section>
+          <aside ng-include=" 'views/commons/nav.html' " id="navigationbar"></aside>
+      </div>
+        <div ng-view></div>
+        <div ng-show="!isSpecificPage() && !showSpinner" ng-cloak>
+            <section ng-include=" 'views/commons/footer.html' " id="navigationbar"></section>
+        </div>
+  </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular-footable/dist/angular-footable.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-summernote/dist/angular-summernote.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+      <!-- build:js(.) plugins/popover-toggle/popover-toggle.js -->
+      <script src="bower_components/angular-popover-toggle/popover-toggle.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/material-scrolltop/material-scrolltop.js -->
+      <script src="bower_components/material-scrolltop/src/material-scrolltop.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/footable/footable.js -->
+      <script src="bower_components/footable/js/footable.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/jasny-bootstrap/jasny-bootstrap.js -->
+      <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/summernote/summernote.js -->
+      <script src="bower_components/summernote/dist/summernote.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/summernote/summernote-es-ES.js -->
+      <script src="bower_components/summernote/lang/summernote-es-ES.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/sweetalert/sweetalert.js -->
+      <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/block-ui/block-ui.js -->
+      <script src="bower_components/angular-block-ui/dist/angular-block-ui.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/smoke/smoke.js -->
+      <script src="bower_components/smoke/dist/js/smoke.js"></script>
+      <!-- endbuild -->
+
+
+      <!-- build:js(.) plugins/angular-i18n/angular-locale_es-mx.js -->
+      <script src="bower_components/angular-i18n/angular-locale_es-mx.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/slimScroll/slimscroll.js -->
+      <script src="bower_components/slimScroll/jquery.slimscroll.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/pdfjs/pdf.js -->
+      <script src="bower_components/jasny-bootstrap/dist/js/pdf.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js(.) plugins/pdfjs/pdf.worker.js -->
+      <script src="bower_components/jasny-bootstrap/dist/js/pdf.worker.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <!--MÓDULO DE CONFIGURACIÓN GENERAL DE LA APP-->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/config.js"></script>
+        <!--MÓDULO CONFIGURACIÓN GENERAL DE LA APP-->
+
+        <!--MODDELS-->
+        <script src="scripts/models/common.model.js"></script>
+        <!--MODDELS-->
+
+        <!--DIRECTIVES DE LA APP-->
+        <script src="scripts/directives/slimScroll.directive.js"></script>
+        <script src="scripts/directives/pageTitle.directive.js"></script>
+        <script src="scripts/directives/autorizacion.directive.js"></script>
+        <script src="scripts/directives/capitalize.directive.js"></script>
+        <!--DIRECTIVES DE LA APP-->
+
+        <!--SERVICES DE LA APP-->
+        <script src="scripts/services/busqueda.service.js"></script>
+        <!--SERVICES DE LA APP-->
+
+        <!--CONTROLLERS DE LA APP-->
+        <script src="scripts/controllers/busquedaProducto.controller.js"></script>
+        <!--CONTROLLERS DE LA APP-->
+
+        <!--INTERCEPTORS DE LA APP-->
+        <script src="scripts/interceptors/autorizacion.interceptor.js"></script>
+        <!--INTERCEPTORS DE LA APP-->
+
+        <!-- endbuild -->
+
+      <!-- build:js(.) plugins/smoke/es.js -->
+      <script src="bower_components/smoke/dist/lang/es.js"></script>
+      <!-- endbuild -->
+
+      <script>
+            $('body').materialScrollTop();
+
+            /* FUNCION PARA DESACTIVAR LOS ENTER EN INPUTS */
+            function desactivarEnterInputs(evt) {
+              var evt = (evt) ? evt : ((event) ? event : null);
+              var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+              if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+            }
+
+            document.onkeypress = desactivarEnterInputs;
+            /* FUNCION PARA DESACTIVAR LOS ENTER EN INPUTS */
+      </script>
+
+  </body>
+</html>

@@ -1,0 +1,89 @@
+@import "../global/variables.scss";
+#nav-packages-big{
+  display: none;
+  @media (min-width: $screen-md) {
+    display: block;
+  }
+}
+#nav-packages{
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}
+
+.dynamic-big-sc{
+  display: none;
+  @media (min-width: $screen-md) {
+    display: block;
+  }
+}
+.dynamic-small-sc{
+  display: block;
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}
+.dynamic-big-sc-nav{
+  display: none;
+  @media (min-width: $screen-sm) {
+    display: block;
+  }
+}
+.dynamic-small-sc-nav{
+  display: block;
+  @media (min-width: $screen-sm) {
+    display: none;
+  }
+}
+.smallRelative{
+  position: relative;
+  @media (min-width: $screen-md) {
+    position: fixed;
+  }
+}
+
+.btn-accion-price-share{
+  @media (max-width: $screen-xs-max) {
+    text-align: center;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    text-align: right;
+  }
+  @media (min-width: $screen-lg-min) {
+    text-align: right;
+  }
+}
+
+.lbl-package-price{
+  @media (max-width: $screen-xs-max) {
+    text-align: left;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    text-align: left;
+  }
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    text-align: right;
+  }
+  @media (min-width: $screen-lg-min) {
+    text-align: right;
+  }
+}
+
+.list-packages{
+  padding-left: 0;
+  width: 100%;
+}
+.list-packages-item {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.list-packages-item:hover{
+  background-color: #f3f3f3;
+}

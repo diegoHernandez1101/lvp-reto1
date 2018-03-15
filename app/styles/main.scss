@@ -1,0 +1,42 @@
+//$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
+//@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+//@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+//@import "../../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
+//// Variables, Mixins
+
+//@import "global/mixins.scss"; //este
+@import "global/variables.scss";
+// INSPINIA Theme Elements
+@import "layout/typography.scss";
+//@import "layout/navigation.scss";//este
+//@import "layout/top_navigation.scss";//este
+@import "layout/buttons.scss";
+//@import "layout/badgets_labels.scss";//este
+@import "layout/elements.scss";
+//@import "layout/sidebar.scss";//este
+@import "layout/base.scss";
+@import "layout/pages.scss";
+//@import "layout/chat.scss";//este
+//@import "layout/metismenu.scss";//este
+@import "layout/spinners.scss";
+@import "layout/wizard.scss";
+@import "layout/table-model.scss";
+@import "layout/listas.scss";
+@import "layout/header.scss";
+
+// RTL Support
+
+
+// For demo only - config box style
+@import "layout/theme-config.scss";//este
+
+// INSPINIA Skins
+@import "layout/skins.scss";//este
+
+// Media query style
+@import "layout/media.scss";//este
+
+// Custom style
+// Your custom style to override base style
+@import "layout/custom.scss";

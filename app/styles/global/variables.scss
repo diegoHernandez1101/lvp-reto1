@@ -1,0 +1,88 @@
+// Basic Colors
+$navy: #b3b3b3;       // Primary color
+$dark-gray: #c2c2c2;  // Default color
+//$blue: #1c84c6;       // Success color
+$blue: #3bb0c9;       // Success color Propuesta
+$lazur: #23c6c8;      // Info color
+$yellow: #f8ac59;     // Warrning color
+$red: #ED5565;        // Danger color
+
+// Various colors
+//$text-color: #676a6c;   // Body text
+$text-color: #000000;   // Body text
+$gray: #f3f3f4;         // Background wrapper color
+$gray-background: #fefeff;
+$liverpool: #e4348c;
+$light-gray: #D1DADE;   // Default label, badget
+//$label-badget-color: #5E5E5E;
+$label-badget-color: #000000;
+$light-blue:#f3f6fb;
+
+// Spiner color and margin
+$spin-color: $navy;
+$spin-margin: 0 auto;
+
+
+// IBOX colors ( default panel colors)
+$border-color: #e7eaec;     // IBox border
+$ibox-title-bg:#ffffff;     // IBox Background header
+$ibox-content-bg:#ffffff;   // IBox Background content
+
+//Sidebar width
+$sidebar-width: 220px;
+
+// Boxed layout width
+$boxed-width: 1200px;
+$boxed-backgound: url('patterns/shattered.png');
+
+//Border radius for buttons
+$btn-border-radius: 3px;
+
+//Navigation
+$nav-bg: #2F4050;
+$nav-profil-pattern: url("patterns/header-profile.png") no-repeat;
+$nav-text-color: #a7b1c2;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs: 480px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min: $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone: $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet: $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop: $screen-md-min;
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop: $screen-lg-min;
+$font-size-base:          14px;
+
+$line-height-base:        1.428571429; // 20/14
+$table-border-color:            #ddd !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px

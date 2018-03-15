@@ -1,0 +1,64 @@
+<nav style="width:100%; box-shadow: 2px 10px 15px #cccccc;" class="navbar navbar-default white-bg">
+    <div class="row" style="overflow-x:hidden">
+        <div class="col-lg-1 col-md-1 col-sm-2" style="padding-bottom:30px">
+            <div class="container-fluid">
+                <div class="text-right">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navHeader" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand dynamic-big-sc" style="margin-left: -15px; margin-top: 5px;">
+                        <img src="images/liverpool.png" width="200px" id="imgLogo" name="imgLogo" class="text-center"></img>
+                    </a>
+                    <a class="navbar-brand dynamic-small-sc" style="margin-left: -10px; margin-top: 18px;">
+                      <img src="images/liverpool.png" width="170px" id="imgLogo" name="imgLogo"></img>
+                   </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-7 col-sm-7 dynamic-big-sc-nav" style="margin-top: -5px;">
+            <div class="collapse navbar-collapse text-center menu-header-padding">
+                <ul class="nav navbar-nav">
+                    <li><a>
+                        <div class="search-form" style="margin-right: -150px">
+                            <form action="index.html" method="get">
+                                <div class="input-group">
+                                    <input type="text" name="search" class="form-control input-lg">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-lg btn-liverpool" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-3 dynamic-big-sc-nav" style="margin-top: 0px;">
+            <div class="collapse navbar-collapse text-center menu-header-padding">
+                <ul class="nav navbar-nav navbar-right" style="margin-right: -10px">
+                    <li><a ng-click="logout()"><h3><i class="fa fa-money"></i> Mis pedidos</h3></a></li>
+                    <li><a ng-click="logout()"><h3> |</h3></a></li>
+                    <li><a ng-click="logout()"><h3><i class="fa fa-user"></i> Iniciar sesión</h3></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 dynamic-small-sc-nav">
+            <div class="collapse navbar-collapse text-center " id="navHeader">
+                <ul class="nav navbar-nav" data-toggle="collapse" data-target="#navHeader">
+                    <li ng-click="nuevaCotizacion()"><a><h3><i class="fa fa-file-text"></i> Mis pedidos</h3></a></li>
+                    <li ng-click="buscarCotizacion()"><a><h3><i class="fa fa-search"></i> Iniciar sesi&oacute;n</h3></a></li>
+                </ul>
+                <ul class="nav  navbar-nav navbar-right">
+                    <li style="padding-top: 15px; padding-right: 1px; padding-bottom: 25px; background-color: #ffffff;"><h3 style="color: #FFFFFF"><i class="fa fa-user"></i> Hola, {{usuario.nombre}}</h3></li>
+                    <li><a ng-click="logout()"><h3><i class="fa fa-sign-out"></i> Cerrar sesión</h3></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
