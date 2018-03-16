@@ -1,9 +1,8 @@
 'use strict';
 //function BusquedaCtrl($scope,$filter,blockUI,CatalogosService,BusquedaService,CotizacionService,TransicionService,$location,NotificacionService,$uibModal, $rootScope, $route) {
-function BusquedaCtrl($scope,$filter,blockUI,BusquedaService,$location,NotificacionService,$uibModal, $rootScope, $route) {
+function BusquedaCtrl($scope,$filter,blockUI,BusquedaService,NotificacionService,$location,$uibModal, $rootScope, $route) {
 
-
-  $scope.nomProducto = null;
+  $scope.s = null;
 
         $scope.definirModelo = function (){
           $scope.idModelo = $scope.split($scope.modelo.valor, 1);
@@ -15,17 +14,19 @@ function BusquedaCtrl($scope,$filter,blockUI,BusquedaService,$location,Notificac
           $scope.nomLocalProducto = null;
 
 
-          if($scope.nomProducto != null){
-            $scope.nomLocalProducto = ("tienda?s="$scope.nomProducto+"&d3106047a194921c01969dfdec083925=json");
+          if($scope.s != null){
+            $scope.nomLocalProducto = ($scope.s);
+            $scope.nomDummy = ("json");
           }
 
 
           blockUI.start("Recuperando");
 
-          BusquedaService.recuperarProductos($scope.nomProducto).then(function(success){
+          BusquedaService.recuperarProductos($scope.nomLocalProducto, $scope.nomDummy).then(function(success){
 
               $scope.productos = success.data;
-              $scope.iniciaTablaEntidades();
+
+              //$scope.iniciaTablaEntidades();
 
               blockUI.stop();
 

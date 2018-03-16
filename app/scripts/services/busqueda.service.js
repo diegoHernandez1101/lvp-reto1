@@ -3,7 +3,7 @@ angular.module('lvpBusquedaProductosApp')
   .service('BusquedaService',function ($http, $q, CONFIG) {
 
 
-    this.recuperarProductos = function(nomProducto) {
+    this.recuperarProductos = function(s, d3106047a194921c01969dfdec083925) {
       var request = {
         method : "GET",
         headers :   {
@@ -12,7 +12,8 @@ angular.module('lvpBusquedaProductosApp')
         },
         url     :   CONFIG.CONTEXTO ,
         params: {
-          nomProducto      : nomProducto
+          s      : s,
+          d3106047a194921c01969dfdec083925      : d3106047a194921c01969dfdec083925
         }
 
       }

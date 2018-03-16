@@ -65,14 +65,14 @@
       <button class="material-scrolltop" type="button" style="background-color: #3bb0c9; border-color: #3bb0c9; "><i class="fa fa-arrow-up"></i></button>
 
   <div>
-      <div ng-show="!isSpecificPage() && !showSpinner" ng-cloak>
+      <div ng-show="!isSpecificPage()" ng-cloak>
           <section ng-include=" 'views/commons/header.html' " id="headerbar" class="top-header"></section>
           <aside ng-include=" 'views/commons/nav.html' " id="navigationbar"></aside>
       </div>
-        <div ng-view></div>
-        <div ng-show="!isSpecificPage() && !showSpinner" ng-cloak>
-            <section ng-include=" 'views/commons/footer.html' " id="navigationbar"></section>
-        </div>
+      <div ng-view></div>
+      <div ng-show="!isSpecificPage()" ng-cloak>
+          <section ng-include=" 'views/commons/footer.html' " id="navigationbar"></section>
+      </div>
   </div>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -154,28 +154,20 @@
         <script src="scripts/config.js"></script>
         <!--MÓDULO CONFIGURACIÓN GENERAL DE LA APP-->
 
-        <!--MODDELS-->
-        <script src="scripts/models/common.model.js"></script>
-        <!--MODDELS-->
-
         <!--DIRECTIVES DE LA APP-->
         <script src="scripts/directives/slimScroll.directive.js"></script>
         <script src="scripts/directives/pageTitle.directive.js"></script>
-        <script src="scripts/directives/autorizacion.directive.js"></script>
-        <script src="scripts/directives/capitalize.directive.js"></script>
         <!--DIRECTIVES DE LA APP-->
 
         <!--SERVICES DE LA APP-->
         <script src="scripts/services/busqueda.service.js"></script>
+        <script src="scripts/services/notificacion.service.js"></script>
         <!--SERVICES DE LA APP-->
 
         <!--CONTROLLERS DE LA APP-->
         <script src="scripts/controllers/busquedaProducto.controller.js"></script>
+        <script src="scripts/controllers/notificacion.controller.js"></script>
         <!--CONTROLLERS DE LA APP-->
-
-        <!--INTERCEPTORS DE LA APP-->
-        <script src="scripts/interceptors/autorizacion.interceptor.js"></script>
-        <!--INTERCEPTORS DE LA APP-->
 
         <!-- endbuild -->
 
